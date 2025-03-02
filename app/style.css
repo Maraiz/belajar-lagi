@@ -20,7 +20,7 @@ header.navigasi {
     width: 100%;
     /* max-width: 1200px; */ /* Membatasi lebar maksimum */
     margin: 0 auto; /*ga terlalu guna */
-    padding-bottom: 10px;
+    /* padding-bottom: 20px; */
     margin-inline: auto; 
     display: flex;
     justify-content: space-around;
@@ -28,7 +28,6 @@ header.navigasi {
     z-index: 999;
     flex-wrap: wrap;
     position: relative;
-    background-color: aqua;
     border-bottom:2px solid black ;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
@@ -115,6 +114,84 @@ main .konten .konten-image {
 
 main .konten .konten-image img {
     width: 300px;
-    max-width: 250px;
+    max-width: 300px;
     margin: auto;
 }
+
+main .konten p::first-letter {
+    font-weight: bold;
+    font-size: 200%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+main aside {
+    position: fixed;
+    inset-block: 0;
+    inset-inline-end: 0;
+}
+
+main aside .social-media {
+    height: 100%;
+    display: flex;
+}
+
+main aside .social-media ul {
+    padding: 1.5rem 1rem;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    margin: auto;
+    background-color: #2d3e50;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+main aside .social-media li  {
+    list-style-type: none;
+    
+}
+
+main aside .social-media li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    transition: all 0.1s ease-in-out;
+}
+
+main aside .social-media li a:hover {
+    color: #89b0d9;
+  }
+
+  /* Medium devices (768px dan di bawahnya) */
+@media screen and (max-width: 768px) {
+    header.navigasi {
+      flex-direction: column;
+    }
+
+    header.navigasi .navigasi-list ul {
+        flex-wrap: wrap;
+        column-gap: 0.5rem;
+        padding-bottom: 20px;
+      }
+
+      main {
+        padding: 1rem 3rem;
+      }
+
+    main .konten {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      main .konten .konten-deskripsi .judul {
+        font-size: 3rem;
+      }
+      main .content .konten-deskripsi p {
+        font-size: 1rem;
+      }
+      main .content .konten-image {
+        order: -1;
+      }
+    }
