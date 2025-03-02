@@ -18,8 +18,10 @@ header .logo img {
 
 header.navigasi {
     width: 100%;
-    margin: 0;
-    margin-inline: auto;
+    /* max-width: 1200px; */ /* Membatasi lebar maksimum */
+    margin: 0 auto; /*ga terlalu guna */
+    padding-bottom: 10px;
+    margin-inline: auto; 
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -28,6 +30,8 @@ header.navigasi {
     position: relative;
     background-color: aqua;
     border-bottom:2px solid black ;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 
 header.navigasi .navigasi-list ul {
@@ -56,3 +60,61 @@ header.navigasi .navigasi-list li:hover a {
     color: white;
 }
 
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 2rem 4rem;
+    display: flex;
+}
+
+main .konten {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+main .konten .konten-deskripsi {
+    flex: 1 1;
+}
+
+main .konten .konten-deskripsi .judul {
+    margin-block: 0.5rem;
+    font-size: 3.5rem;
+}
+
+main .konten .konten-deskripsi p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+}
+
+main .konten .konten-deskripsi button {
+    padding: 0.8rem 2.5rem;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    margin-block-start: 1rem;
+    background-color: #2d3e50;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+}
+
+main .konten .konten-deskripsi button:hover {
+    border: 3px solid #2d3e50;
+    background-color: transparent;
+    color: #2d3e50;
+}
+
+main .konten .konten-image {
+    flex: 1;
+    display: flex;
+}
+
+main .konten .konten-image img {
+    width: 300px;
+    max-width: 250px;
+    margin: auto;
+}
